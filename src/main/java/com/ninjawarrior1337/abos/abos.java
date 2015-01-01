@@ -14,12 +14,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraftforge.common.util.EnumHelper;
-
-import javax.naming.directory.ModificationItem;
 
 import static com.ninjawarrior1337.abos.reference.Reference.MOD_ID;
 
@@ -33,6 +29,14 @@ public class abos {
     public static Item diamondObsidianHoe;
     public static Item obsidianApple;
     public static Item scrod;
+    public static Item scPick;
+    public static Item scAxe;
+    public static Item scSword;
+    public static Item scHoe;
+    public static Item scShovel;
+
+
+
 
     //Tab
     public static final CreativeTabs mo_rod = new CreativeTabs(Reference.MOD_ID)
@@ -46,6 +50,7 @@ public class abos {
 
     //Tool Materials
     public static final Item.ToolMaterial diamondObsidianToolMaterial = EnumHelper.addToolMaterial("diamondObsidianToolMaterial",5, 3122, 25.0F, 6.0F, 20);
+    public static final Item.ToolMaterial scMaterial = EnumHelper.addToolMaterial("scMaterial", 3, 1337, 15.0F, 5.0F, 20);
 
     @Mod.Instance(MOD_ID)
     public static abos instance;
@@ -78,6 +83,21 @@ public class abos {
         GameRegistry.registerItem(diamondObsidianShovel, diamondObsidianShovel.getUnlocalizedName().substring(5));
 
         diamondObsidianHoe = new ItemObsidianHoe(diamondObsidianToolMaterial).setUnlocalizedName("ItemObsidianHoe").setTextureName("abos:obHoe");
+        GameRegistry.registerItem(diamondObsidianHoe, diamondObsidianHoe.getUnlocalizedName().substring(5));
+
+       scPick = new scPick(scMaterial).setUnlocalizedName("scPick").setTextureName("abos:scPick");
+        GameRegistry.registerItem(scPick, scPick.getUnlocalizedName().substring(5));
+
+        scSword = new scSword(scMaterial).setUnlocalizedName("ItemObsidianSword").setTextureName("abos:obSword");
+        GameRegistry.registerItem(diamondObsidianSword, diamondObsidianSword.getUnlocalizedName().substring(5));
+
+        scAxe = new scAxe(scMaterial).setUnlocalizedName("ItemObsidianAxe").setTextureName("abos:obAxe");
+        GameRegistry.registerItem(diamondObsidianAxe, diamondObsidianAxe.getUnlocalizedName().substring(5));
+
+        scShovel = new scShovel(scMaterial).setUnlocalizedName("ItemObsidianShovel").setTextureName("abos:obShovel");
+        GameRegistry.registerItem(diamondObsidianShovel, diamondObsidianShovel.getUnlocalizedName().substring(5));
+
+        scHoe = new scHoe(scMaterial).setUnlocalizedName("ItemObsidianHoe").setTextureName("abos:obHoe");
         GameRegistry.registerItem(diamondObsidianHoe, diamondObsidianHoe.getUnlocalizedName().substring(5));
 
         //Blocks
