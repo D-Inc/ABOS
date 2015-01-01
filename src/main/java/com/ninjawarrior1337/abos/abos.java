@@ -88,17 +88,17 @@ public class abos {
        scPick = new scPick(scMaterial).setUnlocalizedName("scPick").setTextureName("abos:scPick");
         GameRegistry.registerItem(scPick, scPick.getUnlocalizedName().substring(5));
 
-        scSword = new scSword(scMaterial).setUnlocalizedName("ItemObsidianSword").setTextureName("abos:obSword");
-        GameRegistry.registerItem(diamondObsidianSword, diamondObsidianSword.getUnlocalizedName().substring(5));
+        scSword = new scSword(scMaterial).setUnlocalizedName("scSword").setTextureName("abos:scSword");
+        GameRegistry.registerItem(scSword, scSword.getUnlocalizedName().substring(5));
 
-        scAxe = new scAxe(scMaterial).setUnlocalizedName("ItemObsidianAxe").setTextureName("abos:obAxe");
-        GameRegistry.registerItem(diamondObsidianAxe, diamondObsidianAxe.getUnlocalizedName().substring(5));
+        scAxe = new scAxe(scMaterial).setUnlocalizedName("scAxe").setTextureName("abos:scAxe");
+        GameRegistry.registerItem(scAxe, scAxe.getUnlocalizedName().substring(5));
 
-        scShovel = new scShovel(scMaterial).setUnlocalizedName("ItemObsidianShovel").setTextureName("abos:obShovel");
-        GameRegistry.registerItem(diamondObsidianShovel, diamondObsidianShovel.getUnlocalizedName().substring(5));
+        scShovel = new scShovel(scMaterial).setUnlocalizedName("scShovel").setTextureName("abos:scShovel");
+        GameRegistry.registerItem(scShovel, scShovel.getUnlocalizedName().substring(5));
 
-        scHoe = new scHoe(scMaterial).setUnlocalizedName("ItemObsidianHoe").setTextureName("abos:obHoe");
-        GameRegistry.registerItem(diamondObsidianHoe, diamondObsidianHoe.getUnlocalizedName().substring(5));
+        scHoe = new scHoe(scMaterial).setUnlocalizedName("scHoe").setTextureName("abos:scHoe");
+        GameRegistry.registerItem(scHoe, scHoe.getUnlocalizedName().substring(5));
 
         //Blocks
 
