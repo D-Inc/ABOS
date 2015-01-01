@@ -41,7 +41,7 @@ public class RegisterRecipes
 
         RecipeVariables choppingboard = new RecipeVariables();
         choppingboard.addValue("input", new ItemStack(Items.reeds));
-        choppingboard.addValue("output", new ItemStack(abos.scrod, 5));
+        choppingboard.addValue("output", new ItemStack(abos.scrod, 7));
         registry.registerRecipe("choppingboard", choppingboard);
 
 
