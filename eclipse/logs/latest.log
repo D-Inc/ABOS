@@ -1,42 +1,32 @@
-[14:32:01] [main/INFO]: Setting user: Player328
-[14:32:05] [Client thread/INFO]: LWJGL Version: 2.9.1
-[14:32:23] [Client thread/ERROR]: Couldn't initialize twitch stream
-[14:34:57] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:A Bunch Of Stuff
-[14:35:00] [Sound Library Loader/INFO]: Sound engine started
-[14:35:48] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[14:35:48] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[14:35:48] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:A Bunch Of Stuff
-[14:35:49] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[14:35:49] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[14:35:50] [Sound Library Loader/INFO]: Sound engine started
-[14:36:37] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[14:36:37] [Server thread/INFO]: Generating keypair
-[14:36:41] [Server thread/INFO]: Preparing start region for level 0
-[14:36:46] [Server thread/INFO]: Preparing spawn area: 0%
-[14:36:47] [Server thread/INFO]: Changing view distance to 8, from 10
-[14:36:51] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2527ms behind, skipping 50 tick(s)
-[14:36:52] [Server thread/INFO]: Player328[local:E:a0390c45] logged in with entity id 24 at (-587.8270847775104, 4.0, -922.8468748721592)
-[14:36:52] [Server thread/INFO]: Player328 joined the game
-[14:37:26] [Server thread/INFO]: Player328 has just earned the achievement [Taking Inventory]
-[14:37:26] [Client thread/INFO]: [CHAT] Player328 has just earned the achievement [Taking Inventory]
-[14:37:30] [Server thread/INFO]: [Player328: Set own game mode to Creative Mode]
-[14:37:30] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[14:38:12] [Server thread/INFO]: Saving and pausing game...
-[14:38:12] [Server thread/INFO]: Saving chunks for level 'Test'/Overworld
-[14:38:13] [Server thread/INFO]: Saving chunks for level 'Test'/Nether
-[14:38:13] [Server thread/INFO]: Saving chunks for level 'Test'/The End
-[14:38:27] [Server thread/INFO]: Saving and pausing game...
-[14:38:27] [Server thread/INFO]: Saving chunks for level 'Test'/Overworld
-[14:38:28] [Server thread/INFO]: Saving chunks for level 'Test'/Nether
-[14:38:28] [Server thread/INFO]: Saving chunks for level 'Test'/The End
-[14:40:00] [Server thread/INFO]: Saving and pausing game...
-[14:40:00] [Server thread/INFO]: Saving chunks for level 'Test'/Overworld
-[14:40:00] [Server thread/INFO]: Saving chunks for level 'Test'/Nether
-[14:40:00] [Server thread/INFO]: Saving chunks for level 'Test'/The End
-[14:40:00] [Server thread/INFO]: Stopping server
-[14:40:00] [Server thread/INFO]: Saving players
-[14:40:00] [Server thread/INFO]: Saving worlds
-[14:40:00] [Server thread/INFO]: Saving chunks for level 'Test'/Overworld
-[14:40:01] [Server thread/INFO]: Saving chunks for level 'Test'/Nether
-[14:40:01] [Server thread/INFO]: Saving chunks for level 'Test'/The End
-[14:40:02] [Client thread/INFO]: Stopping!
+[16:18:49] [main/INFO]: Setting user: Player875
+[16:18:52] [Client thread/INFO]: LWJGL Version: 2.9.1
+[16:18:53] [Client thread/ERROR]: Couldn't initialize twitch stream
+[16:18:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:A Bunch Of Stuff
+[16:19:00] [Sound Library Loader/INFO]: Sound engine started
+[16:19:03] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:19:03] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:19:04] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:A Bunch Of Stuff
+[16:19:04] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:19:04] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:19:05] [Sound Library Loader/INFO]: Sound engine started
+[16:19:24] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[16:19:24] [Server thread/INFO]: Generating keypair
+[16:19:25] [Server thread/INFO]: Preparing start region for level 0
+[16:19:26] [Server thread/INFO]: Changing view distance to 8, from 10
+[16:19:27] [Server thread/INFO]: Player875[local:E:44800b93] logged in with entity id 32 at (-595.4324915876721, 4.0, -895.8965930657059)
+[16:19:27] [Server thread/INFO]: Player875 joined the game
+[16:19:38] [Server thread/INFO]: [Player875: Set own game mode to Creative Mode]
+[16:19:38] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[16:19:54] [Server thread/INFO]: [Player875: Set own game mode to Survival Mode]
+[16:19:54] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[16:21:48] [Server thread/INFO]: Saving and pausing game...
+[16:21:48] [Server thread/INFO]: Saving chunks for level 'Test'/Overworld
+[16:21:48] [Server thread/INFO]: Saving chunks for level 'Test'/Nether
+[16:21:48] [Server thread/INFO]: Saving chunks for level 'Test'/The End
+[16:21:48] [Server thread/INFO]: Stopping server
+[16:21:48] [Server thread/INFO]: Saving players
+[16:21:48] [Server thread/INFO]: Saving worlds
+[16:21:48] [Server thread/INFO]: Saving chunks for level 'Test'/Overworld
+[16:21:49] [Server thread/INFO]: Saving chunks for level 'Test'/Nether
+[16:21:49] [Server thread/INFO]: Saving chunks for level 'Test'/The End
+[16:21:50] [Client thread/INFO]: Stopping!

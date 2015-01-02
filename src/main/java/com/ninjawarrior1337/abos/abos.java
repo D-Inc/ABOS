@@ -34,6 +34,7 @@ public class abos {
     public static Item scSword;
     public static Item scHoe;
     public static Item scShovel;
+    public static Item scApple;
 
 
 
@@ -50,7 +51,7 @@ public class abos {
 
     //Tool Materials
     public static final Item.ToolMaterial diamondObsidianToolMaterial = EnumHelper.addToolMaterial("diamondObsidianToolMaterial",5, 3122, 25.0F, 6.0F, 20);
-    public static final Item.ToolMaterial scMaterial = EnumHelper.addToolMaterial("scMaterial", 3, 1337, 15.0F, 5.0F, 20);
+    public static final Item.ToolMaterial scMaterial = EnumHelper.addToolMaterial("scMaterial", 3, 1337, 8.7F, 5.0F, 20);
 
     @Mod.Instance(MOD_ID)
     public static abos instance;
@@ -106,6 +107,9 @@ public class abos {
         obsidianApple = new ItemObsidianApple(20, 2.0F, true).setUnlocalizedName("ItemObsidianApple").setTextureName("abos:obApple");
         GameRegistry.registerItem(obsidianApple, obsidianApple.getUnlocalizedName().substring(5));
 
+        scApple = new scApple (6, 0.5F, true).setUnlocalizedName("scApple").setTextureName("abos:scApple");
+        GameRegistry.registerItem(scApple, scApple.getUnlocalizedName().substring(5));
+
 
     }
 
@@ -126,6 +130,15 @@ public class abos {
         GameRegistry.addRecipe(new ItemStack(obsidianApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.itemObsidianRod, 'A', Items.golden_apple});
         GameRegistry.addRecipe(new ItemStack(scrod, 4), new Object[]{"XXX","   ","   ", 'X',Items.reeds});
         GameRegistry.addRecipe(new ItemStack(scrod, 4), new Object[]{"   ","XXX","   ", 'X',Items.reeds});
+        GameRegistry.addRecipe(new ItemStack(scPick, 1), new Object[]{"DDD"," O "," O ", 'D', Items.diamond, 'O',abos.scrod});
+        GameRegistry.addRecipe(new ItemStack(scSword, 1), new Object[]{" D "," D "," O ", 'D',Items.diamond, 'O',abos.scrod});
+        GameRegistry.addRecipe(new ItemStack(scSword, 1), new Object[]{"D  ","D  ","O  ", 'D',Items.diamond, 'O',abos.scrod});
+        GameRegistry.addRecipe(new ItemStack(scAxe, 1), new Object[]{"DD ","DO "," O ", 'O',abos.scrod, 'D',Items.diamond});
+        GameRegistry.addRecipe(new ItemStack(scAxe, 1), new Object[]{" DD"," OD"," O ", 'O',abos.scrod, 'D',Items.diamond});
+        GameRegistry.addRecipe(new ItemStack(scShovel, 1),new Object[]{"D  ","O  ","O  ", 'D',Items.diamond, 'O',abos.scrod});
+        GameRegistry.addRecipe(new ItemStack(scShovel, 1),new Object[]{" D "," O "," O ", 'D',Items.diamond, 'O',abos.scrod});
+        GameRegistry.addRecipe(new ItemStack(scHoe, 1),new Object[]{"DD "," O "," O ", 'D',Items.diamond, 'O',abos.scrod});
+        GameRegistry.addRecipe(new ItemStack(scApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.scrod, 'A', Items.golden_apple});
 
         //API's
         FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.registerCustomRecipes");
