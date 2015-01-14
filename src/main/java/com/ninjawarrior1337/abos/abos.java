@@ -1,10 +1,8 @@
 package com.ninjawarrior1337.abos;
 
 import com.ninjawarrior1337.abos.item.*;
-import com.ninjawarrior1337.abos.proxy.IProxy;
-import com.ninjawarrior1337.abos.reference.Reference;
+import com.ninjawarrior1337.abos.Reference;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -17,9 +15,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
-import static com.ninjawarrior1337.abos.reference.Reference.MOD_ID;
+import java.sql.Ref;
 
-@Mod(modid = MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class abos {
     public static Item itemObsidianRod;
     public static Item diamondObsidianPickaxe;
@@ -53,11 +51,8 @@ public class abos {
     public static final Item.ToolMaterial diamondObsidianToolMaterial = EnumHelper.addToolMaterial("diamondObsidianToolMaterial",5, 3122, 25.0F, 6.0F, 20);
     public static final Item.ToolMaterial scMaterial = EnumHelper.addToolMaterial("scMaterial", 3, 1337, 8.7F, 5.0F, 20);
 
-    @Mod.Instance(MOD_ID)
+    @Mod.Instance(Reference.MOD_ID)
     public static abos instance;
-
-    @SidedProxy(clientSide = "com.ninjawarrior1337.abos.proxy.ClientProxy", serverSide = "com.ninjawarrior1337.abos.proxy.ServerProxy")
-    public static IProxy proxy;
 
     @Mod.EventHandler
     public void PreInit(FMLPreInitializationEvent event)
@@ -66,7 +61,7 @@ public class abos {
         itemObsidianRod = new ItemObsidianRod().setUnlocalizedName("ItemObsidianRod").setMaxStackSize(64).setTextureName(Reference.MOD_ID + ":obsidianstick");;
         GameRegistry.registerItem(itemObsidianRod, itemObsidianRod.getUnlocalizedName().substring(5));
 
-        scrod = new scrod().setUnlocalizedName("scrod").setMaxStackSize(64).setTextureName("abos:scrod").setMaxStackSize(64);
+        scrod = new scrod().setUnlocalizedName("scrod").setMaxStackSize(64).setTextureName(Reference.MOD_ID + "scrod").setMaxStackSize(64);
         GameRegistry.registerItem(scrod, scrod.getUnlocalizedName().substring(5));
 
 
