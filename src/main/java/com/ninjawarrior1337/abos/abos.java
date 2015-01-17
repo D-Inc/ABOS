@@ -1,21 +1,19 @@
 package com.ninjawarrior1337.abos;
 
 import com.ninjawarrior1337.abos.item.*;
-import com.ninjawarrior1337.abos.Reference;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
-
-import java.sql.Ref;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class abos {
@@ -33,6 +31,7 @@ public class abos {
     public static Item scHoe;
     public static Item scShovel;
     public static Item scApple;
+    public static Block scBlock;
 
 
 
@@ -58,10 +57,10 @@ public class abos {
     public void PreInit(FMLPreInitializationEvent event)
     {
         //Items
-        itemObsidianRod = new ItemObsidianRod().setUnlocalizedName("ItemObsidianRod").setMaxStackSize(64).setTextureName(Reference.MOD_ID + ":obsidianstick");;
+        itemObsidianRod = new ItemObsidianRod().setUnlocalizedName("ItemObsidianRod").setMaxStackSize(64).setTextureName(Reference.MOD_ID + ":obsidianstick");
         GameRegistry.registerItem(itemObsidianRod, itemObsidianRod.getUnlocalizedName().substring(5));
 
-        scrod = new scrod().setUnlocalizedName("scrod").setMaxStackSize(64).setTextureName(Reference.MOD_ID + "scrod").setMaxStackSize(64);
+        scrod = new scrod().setUnlocalizedName("scrod").setMaxStackSize(64).setTextureName("abos:scrod").setMaxStackSize(64);
         GameRegistry.registerItem(scrod, scrod.getUnlocalizedName().substring(5));
 
 
@@ -97,6 +96,7 @@ public class abos {
         GameRegistry.registerItem(scHoe, scHoe.getUnlocalizedName().substring(5));
 
         //Blocks
+        scBlock = new scBlock
 
         //Food
         obsidianApple = new ItemObsidianApple(20, 2.0F, true).setUnlocalizedName("ItemObsidianApple").setTextureName("abos:obApple");
