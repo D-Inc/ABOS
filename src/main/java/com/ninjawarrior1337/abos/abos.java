@@ -96,7 +96,7 @@ public class abos {
         GameRegistry.registerItem(scHoe, scHoe.getUnlocalizedName().substring(5));
 
         //Blocks
-        scBlock = new scBlock
+
 
         //Food
         obsidianApple = new ItemObsidianApple(20, 2.0F, true).setUnlocalizedName("ItemObsidianApple").setTextureName("abos:obApple");
