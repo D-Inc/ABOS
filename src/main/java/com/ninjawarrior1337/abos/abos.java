@@ -1,5 +1,6 @@
 package com.ninjawarrior1337.abos;
 
+import com.ninjawarrior1337.abos.block.OreChicken;
 import com.ninjawarrior1337.abos.item.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -8,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -31,7 +33,8 @@ public class abos {
     public static Item scHoe;
     public static Item scShovel;
     public static Item scApple;
-    public static Block scBlock;
+    public static Block oreChicken;
+    public static Item scButt;
 
 
 
@@ -96,7 +99,8 @@ public class abos {
         GameRegistry.registerItem(scHoe, scHoe.getUnlocalizedName().substring(5));
 
         //Blocks
-
+        oreChicken = new OreChicken(Material.rock).setBlockName("OreChicken");
+        GameRegistry.registerBlock(oreChicken, oreChicken.getUnlocalizedName().substring(5));
 
         //Food
         obsidianApple = new ItemObsidianApple(20, 2.0F, true).setUnlocalizedName("ItemObsidianApple").setTextureName("abos:obApple");
@@ -104,6 +108,9 @@ public class abos {
 
         scApple = new scApple (6, 0.5F, true).setUnlocalizedName("scApple").setTextureName("abos:scApple");
         GameRegistry.registerItem(scApple, scApple.getUnlocalizedName().substring(5));
+
+        //Generation
+        GameRegistry.registerWorldGenerator(new ChickenGenoration(),0);
 
 
     }
