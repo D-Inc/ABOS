@@ -34,7 +34,6 @@ public class abos {
     public static Item scShovel;
     public static Item scApple;
     public static Block oreChicken;
-    public static Item scButt;
 
 
 
