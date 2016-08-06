@@ -17,6 +17,7 @@ public class scApple extends ItemFood
         super(hunger, saturation, isWolfsFavoriteMeat);
         setPotionEffect(Potion.moveSpeed.id, 120, 4, 1.0F);
         setCreativeTab(abos.mo_rod);
+        this.setAlwaysEdible();
     }
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack Item, EntityPlayer player, List toolTip, boolean advanced)

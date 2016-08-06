@@ -18,9 +18,7 @@ public class ItemObsidianApple extends ItemFood
         super(hunger, saturation, isWolfsFavoriteMeat);
         setCreativeTab(abos.mo_rod);
         setPotionEffect(Potion.harm.id, 10, 124, 0.1F);
-
-
-
+        this.setAlwaysEdible();
     }
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack Item, EntityPlayer player, List toolTip, boolean advanced)

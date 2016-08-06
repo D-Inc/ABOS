@@ -108,9 +108,6 @@ public class abos {
         scApple = new scApple (6, 0.5F, true).setUnlocalizedName("scApple").setTextureName("abos:scApple");
         GameRegistry.registerItem(scApple, scApple.getUnlocalizedName().substring(5));
 
-        //Generation
-        GameRegistry.registerWorldGenerator(new ChickenGenoration(),0);
-
 
     }
 
@@ -142,7 +139,7 @@ public class abos {
         GameRegistry.addRecipe(new ItemStack(scApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.scrod, 'A', Items.golden_apple});
 
         //API's
-        FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.registerCustomRecipes");
+        FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.register");
 
 
 
