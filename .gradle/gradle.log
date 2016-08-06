@@ -1,10 +1,30 @@
 ****************************
  Powered By MCP:             
- http://mcp.ocean-labs.de/   
+ http://modcoderpack.com/    
  Searge, ProfMobius, Fesh0r, 
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
+:extractMcpData UP-TO-DATE
+:getVersionJson
+:extractUserDev UP-TO-DATE
+:genSrgs SKIPPED
+:extractNatives UP-TO-DATE
+:getAssetsIndex
+:getAssets
+:makeStart SKIPPED
+:downloadMcpTools SKIPPED
+:downloadClient SKIPPED
+:downloadServer SKIPPED
+:mergeJars SKIPPED
+:deobfuscateJar SKIPPED
+:decompile SKIPPED
+:processSources SKIPPED
+:remapJar SKIPPED
+:extractMinecraftSrc SKIPPED
+:recompMinecraft SKIPPED
+:repackMinecraft SKIPPED
+:setupDecompWorkspace UP-TO-DATE
 :ideaModule
 :ideaProject
 :ideaWorkspace
@@ -12,4 +32,4 @@
 
 BUILD SUCCESSFUL
 
-Total time: 30.364 secs
+Total time: 38.417 secs

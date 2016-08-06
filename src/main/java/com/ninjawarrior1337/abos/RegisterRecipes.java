@@ -3,7 +3,6 @@ package com.ninjawarrior1337.abos;
 import com.mrcrayfish.furniture.api.IRecipeRegistry;
 import com.mrcrayfish.furniture.api.RecipeVariables;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 
@@ -43,9 +42,6 @@ public class RegisterRecipes
         choppingboard.addValue("input", new ItemStack(Items.reeds));
         choppingboard.addValue("output", new ItemStack(abos.scrod, 7));
         registry.registerRecipe("choppingboard", choppingboard);
-
-
-
 
 
     }
