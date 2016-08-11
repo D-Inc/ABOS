@@ -5,27 +5,38 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
-:compileApiJava UP-TO-DATE
-:processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
-:sourceMainJava UP-TO-DATE
-:compileJava UP-TO-DATE
-:processResources UP-TO-DATE
-:classes UP-TO-DATE
-:jar
-:compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE
-:testClasses UP-TO-DATE
-:test UP-TO-DATE
 :extractMcpData UP-TO-DATE
 :getVersionJson
 :extractUserDev UP-TO-DATE
 :genSrgs SKIPPED
-:reobf
-:assemble
-:check UP-TO-DATE
-:build
+:extractNatives UP-TO-DATE
+:getAssetsIndex
+:getAssets
+:makeStart SKIPPED
+:downloadMcpTools SKIPPED
+:downloadClient SKIPPED
+:downloadServer SKIPPED
+:mergeJars SKIPPED
+:deobfuscateJar SKIPPED
+:decompile SKIPPED
+:processSources SKIPPED
+:remapJar SKIPPED
+:extractMinecraftSrc SKIPPED
+:recompMinecraft SKIPPED
+:repackMinecraft SKIPPED
+:setupDecompWorkspace UP-TO-DATE
+:ideaModule
+Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6.pom
+Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-dev.jar
+Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-api.jar
+Download http://files.minecraftforge.net/maven/codechicken/CodeChickenLib/1.7.10-1.1.3.138/CodeChickenLib-1.7.10-1.1.3.138-dev.jar
+Download http://files.minecraftforge.net/maven/codechicken/ForgeMultipart/1.7.10-1.2.0.345/ForgeMultipart-1.7.10-1.2.0.345-dev.jar
+Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-sources.jar
+Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-javadoc.jar
+:ideaProject
+:ideaWorkspace
+:idea
 
 BUILD SUCCESSFUL
 
-Total time: 14.832 secs
+Total time: 2 mins 49.862 secs
