@@ -10,8 +10,17 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+/**
+ * Created by ninjawarrior1337 on 8/11/16.
+ */
 public class DirtCell extends Item implements IStorageCell, IAEItemPowerStorage
 {
+    public static final String suffix = "8";
+
+    public static final int byte_cell = 8;
+    public static final int type_cell = 1;
+    private final int MAX_POWER = 32000;
+
     public DirtCell()
     {
         setUnlocalizedName("dirt_cell");

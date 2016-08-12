@@ -1,7 +1,6 @@
 package com.ninjawarrior1337.abos;
 
-import com.mrcrayfish.furniture.api.IRecipeRegistry;
-import com.mrcrayfish.furniture.api.RecipeVariables;
+import com.mrcrayfish.furniture.api.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

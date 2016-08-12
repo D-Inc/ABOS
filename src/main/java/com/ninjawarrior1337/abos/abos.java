@@ -1,7 +1,6 @@
 package com.ninjawarrior1337.abos;
 
 import com.ninjawarrior1337.abos.block.OreChicken;
-import com.ninjawarrior1337.abos.events.changeplayerdisplayname;
 import com.ninjawarrior1337.abos.item.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -16,7 +15,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
@@ -37,6 +35,7 @@ public class abos {
     public static Item scApple;
     public static Item DirtCell;
     public static Block oreChicken;
+    public static Item TestCell;
 
 
 
@@ -71,6 +70,9 @@ public class abos {
 
         //DirtCell = new DirtCell();
         //GameRegistry.registerItem(DirtCell, DirtCell.getUnlocalizedName().substring(5));
+
+        TestCell = new TestCell();
+        GameRegistry.registerItem(TestCell, TestCell.getUnlocalizedName().substring(5));
 
         //Tools
         diamondObsidianPickaxe = new ItemObsidianPickaxe(diamondObsidianToolMaterial).setUnlocalizedName("ItemObsidianPickaxe").setTextureName("abos:obPick");
@@ -120,8 +122,6 @@ public class abos {
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event)
     {
-        //Events
-        MinecraftForge.EVENT_BUS.register(new changeplayerdisplayname());
         //Recipes
         GameRegistry.addRecipe(new ItemStack(itemObsidianRod, 4), new Object[]{"   ", "O  ", "O  ", 'O', Blocks.obsidian});
         GameRegistry.addRecipe(new ItemStack(itemObsidianRod, 4), new Object[]{"   ", " O ", " O ", 'O', Blocks.obsidian});
@@ -148,6 +148,8 @@ public class abos {
 
         //API's
         FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.register");
+
+
 
     }
 
