@@ -185,6 +185,12 @@ public class DirtCell extends AEBaseItem implements IStorageCell{
                 if( list.isEmpty() && ia != null )
                 {
                     playerInventory.setInventorySlotContents( playerInventory.currentItem, null );
+                    // drop core
+					final ItemStack extraB = ia.addItems(  );
+					if( extraB != null )
+					{
+						player.dropPlayerItemWithRandomChoice( extraB, false );
+					}
 
                     // drop upgrades
                     final IInventory upgradesInventory = this.getUpgradesInventory( stack );
