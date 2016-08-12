@@ -13,4 +13,5 @@ item.scShovel.name=Sugar Cane Shovel
 item.scAxe.name=Sugar Cane Axe
 item.scHoe.name=Sugar Cane Hoe
 item.scApple.name=Sugar Cane Apple
-item.DirtCell.name=Dirt Cell
+item.dirt_cell.name=Dirt Cell
+tile.RedstoneInfusedDirt.name=Redstone Infused Dirt

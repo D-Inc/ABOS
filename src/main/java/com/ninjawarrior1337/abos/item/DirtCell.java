@@ -18,10 +18,9 @@ import appeng.items.contents.CellConfig;
 import appeng.items.contents.CellUpgrades;
 import appeng.util.InventoryAdaptor;
 import appeng.util.Platform;
+import com.ninjawarrior1337.abos.abos;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -33,14 +32,16 @@ import java.util.List;
  * Created by Rocker545 on 8/11/2016.
  */
 public class DirtCell extends AEBaseItem implements IStorageCell{
-    private final int totalBytes = 16384;
-    private final int perType = 8;
+    private final int totalBytes = 64;
+    private final int perType = 1;
     private final double idleDrain = 0;
 
     public DirtCell()
     {
         this.setMaxStackSize(1);
         setUnlocalizedName("dirt_cell");
+        this.setCreativeTab(abos.mo_rod);
+        setTextureName("abos:dirt_cell");
     }
 
     @Override
@@ -97,7 +98,7 @@ public class DirtCell extends AEBaseItem implements IStorageCell{
     @Override
     public int getTotalTypes( final ItemStack cellItem )
     {
-        return 8;
+        return 1;
     }
 
     @Override
@@ -188,7 +189,7 @@ public class DirtCell extends AEBaseItem implements IStorageCell{
                 {
                     playerInventory.setInventorySlotContents( playerInventory.currentItem, null );
                     // drop core
-					final ItemStack extraB = ia.addItems(new ItemStack(Blocks.dirt));
+					final ItemStack extraB = ia.addItems(new ItemStack(abos.RedDirt));
 					if( extraB != null )
 					{
 						player.dropPlayerItemWithRandomChoice( extraB, false );

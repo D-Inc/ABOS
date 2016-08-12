@@ -16,6 +16,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class abos {
@@ -33,7 +34,7 @@ public class abos {
     public static Item scHoe;
     public static Item scShovel;
     public static Item scApple;
-    public static Block oreChicken;
+    public static Block RedDirt;
     public static Item DirtCell;
 
 
@@ -102,8 +103,8 @@ public class abos {
         GameRegistry.registerItem(scHoe, scHoe.getUnlocalizedName().substring(5));
 
         //Blocks
-        oreChicken = new RedstoneInfusedDirt(Material.rock).setBlockName("RedstoneInfusedDirt");
-        GameRegistry.registerBlock(oreChicken, oreChicken.getUnlocalizedName().substring(5));
+        RedDirt = new RedstoneInfusedDirt(Material.rock).setBlockName("RedstoneInfusedDirt").setBlockTextureName("abos:RedstoneInfusedDirt");
+        GameRegistry.registerBlock(RedDirt, RedDirt.getUnlocalizedName().substring(5));
 
         //Food
         obsidianApple = new ItemObsidianApple(20, 2.0F, true).setUnlocalizedName("ItemObsidianApple").setTextureName("abos:obApple");
@@ -141,6 +142,9 @@ public class abos {
         GameRegistry.addRecipe(new ItemStack(scShovel, 1),new Object[]{" D "," O "," O ", 'D',Items.diamond, 'O',abos.scrod});
         GameRegistry.addRecipe(new ItemStack(scHoe, 1),new Object[]{"DD "," O "," O ", 'D',Items.diamond, 'O',abos.scrod});
         GameRegistry.addRecipe(new ItemStack(scApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.scrod, 'A', Items.golden_apple});
+        GameRegistry.addShapelessRecipe(new ItemStack(RedDirt, 1), new Object[]{new ItemStack(Items.redstone), new ItemStack(Blocks.dirt)});
+        OreDictionary.registerOre("netherStar", new ItemStack(Items.nether_star));
+        OreDictionary.registerOre("netherStar", DirtCell);
 
         //API's
         FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.register");

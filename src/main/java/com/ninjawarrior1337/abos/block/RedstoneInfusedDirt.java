@@ -3,10 +3,6 @@ package com.ninjawarrior1337.abos.block;
 import com.ninjawarrior1337.abos.abos;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-
-import java.util.Random;
 
 public class RedstoneInfusedDirt extends Block
 {
@@ -18,14 +14,4 @@ public class RedstoneInfusedDirt extends Block
                 this.setStepSound(soundTypeGrass);
                 setHardness(1.0f);
             }
-                @Override
-                public Item getItemDropped(int metadata, Random random, int fortune)
-                {
-                    return Items.cooked_chicken;
-                }
-
-                public int quantityDropped(Random random)
-                {
-                    return 1 + random.nextInt(4);
-                }
-        }
+}
