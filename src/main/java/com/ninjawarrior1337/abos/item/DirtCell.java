@@ -20,6 +20,8 @@ import appeng.util.InventoryAdaptor;
 import appeng.util.Platform;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -185,6 +187,12 @@ public class DirtCell extends AEBaseItem implements IStorageCell{
                 if( list.isEmpty() && ia != null )
                 {
                     playerInventory.setInventorySlotContents( playerInventory.currentItem, null );
+                    // drop core
+					final ItemStack extraB = ia.addItems(new ItemStack(Blocks.dirt));
+					if( extraB != null )
+					{
+						player.dropPlayerItemWithRandomChoice( extraB, false );
+					}
 
                     // drop upgrades
                     final IInventory upgradesInventory = this.getUpgradesInventory( stack );
