@@ -2,7 +2,9 @@ package com.ninjawarrior1337.abos;
 
 import com.ninjawarrior1337.abos.block.RedstoneInfusedDirt;
 import com.ninjawarrior1337.abos.item.*;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Optional;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -17,6 +19,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class abos {
@@ -113,7 +118,20 @@ public class abos {
         scApple = new scApple (6, 0.5F, true).setUnlocalizedName("scApple").setTextureName("abos:scApple");
         GameRegistry.registerItem(scApple, scApple.getUnlocalizedName().substring(5));
 
+        System.out.println("Checking If Thuamcraft is installed");
+        if(Loader.isModLoaded("Thaumcraft"))
+        {
+            System.out.println("Thaumcraft has been detected");
+            loadThaumcraft();
+        }
 
+    }
+
+    @Optional.Method(modid = "Thaumcraft")
+    private void loadThaumcraft()
+    {
+        ThaumcraftApi.registerObjectTag(new ItemStack(DirtCell), new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.EARTH, 1).add(Aspect.VOID, 64));
+        ThaumcraftApi.addShapelessArcaneCraftingRecipe("infusion_crafting", new ItemStack(DirtCell, 1, 0), new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.EARTH, 1).add(Aspect.VOID, 64), new Object[]{new ItemStack(RedDirt, 4, 0), new ItemStack(Items.nether_star, 1, 0)});
     }
 
     @Mod.EventHandler

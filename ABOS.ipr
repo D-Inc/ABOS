@@ -183,6 +183,15 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
+  <component name="libraryTable">
+    <library name="api">
+      <CLASSES />
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/src/main/api" />
+      </SOURCES>
+    </library>
+  </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">

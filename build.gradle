@@ -77,34 +77,28 @@ repositories {
 dependencies {
     compile "appeng:appliedenergistics2:rv3-beta-6:dev"
     compile "appeng:appliedenergistics2:rv3-beta-6:api"
-	
-    compile "codechicken:ForgeMultipart:${minecraft_version}-${fmp_version}:dev"
-    compile "codechicken:CodeChickenLib:${minecraft_version}-${code_chicken_lib_version}:dev"
-    compile "codechicken:CodeChickenCore:${minecraft_version}-${code_chicken_core_version}:dev"
-    compile "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
-    compile "com.mod-buildcraft:buildcraft:${bc_version}:dev"
-    compile "pneumaticCraft:PneumaticCraft-${minecraft_version}:${pneumaticcraft_version}:api"
-
-    // provided APIs
-    compile "li.cil.oc:OpenComputers:MC${minecraft_version}-${opencomputers_version}:api"
-    compile "net.industrial-craft:industrialcraft-2:${ic2_version}-experimental:api"
-    compile "net.mcft.copy.betterstorage:BetterStorage:${minecraft_version}-${betterstorage_version}:api"
-
-    // self compiled APIs
-    compile "appeng:Waila:${waila_version}_${minecraft_version}:api"
-    compile "appeng:RotaryCraft:${rotarycraft_version}:api"
-    compile "appeng:mekanism:${minecraft_version}-${mekansim_version}:api"
-    compile "appeng:InventoryTweaks:${invtweaks_version}:api"
-
-    // self compiled stubs
-    compile(group: 'api', name: 'coloredlightscore', version: "${api_coloredlightscore_version}")
-    compile(group: 'api', name: 'craftguide', version: "${api_craftguide_version}")
-    compile(group: 'api', name: 'immibis', version: "${api_immibis_version}")
-    compile(group: 'api', name: 'mfr', version: "${api_mfr_version}")
-    compile(group: 'api', name: 'railcraft', version: "${api_railcraft_version}")
-    compile(group: 'api', name: 'rf', version: "${api_rf_version}")
+    compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.7.47:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.5.120:dev"
 
     testCompile "junit:junit:4.12"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+
+    api {
+        java {
+            srcDir 'src/main/api'
+        }
+    }
 }
 
 processResources
