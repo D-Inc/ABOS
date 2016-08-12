@@ -8,14 +8,14 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-public class OreChicken extends Block
+public class RedstoneInfusedDirt extends Block
 {
-            public OreChicken(Material material)
+            public RedstoneInfusedDirt(Material material)
             {
                 super(material);
                 setCreativeTab(abos.mo_rod);
                 this.setLightLevel(2.0f);
-                this.setStepSound(soundTypeStone);
+                this.setStepSound(soundTypeGrass);
                 setHardness(1.0f);
             }
                 @Override

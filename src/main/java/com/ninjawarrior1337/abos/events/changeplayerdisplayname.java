@@ -43,6 +43,10 @@ public class changeplayerdisplayname
         if(event.username.contains("Player")){
             event.displayname=(EnumChatFormatting.DARK_GRAY + "" + EnumChatFormatting.BOLD + "UNPAID SCROOB");
         }
+        if(event.username.equals("OG_Arist0tle"))
+        {
+            event.displayname=("OG_NotNiceGuyWhoReplacesIronWithSteel :)");
+        }
     }
 
 }

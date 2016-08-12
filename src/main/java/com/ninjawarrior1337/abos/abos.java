@@ -1,6 +1,6 @@
 package com.ninjawarrior1337.abos;
 
-import com.ninjawarrior1337.abos.block.OreChicken;
+import com.ninjawarrior1337.abos.block.RedstoneInfusedDirt;
 import com.ninjawarrior1337.abos.item.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -102,7 +102,7 @@ public class abos {
         GameRegistry.registerItem(scHoe, scHoe.getUnlocalizedName().substring(5));
 
         //Blocks
-        oreChicken = new OreChicken(Material.rock).setBlockName("OreChicken");
+        oreChicken = new RedstoneInfusedDirt(Material.rock).setBlockName("RedstoneInfusedDirt");
         GameRegistry.registerBlock(oreChicken, oreChicken.getUnlocalizedName().substring(5));
 
         //Food
