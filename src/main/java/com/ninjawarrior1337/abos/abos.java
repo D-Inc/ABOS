@@ -33,9 +33,8 @@ public class abos {
     public static Item scHoe;
     public static Item scShovel;
     public static Item scApple;
-    public static Item DirtCell;
     public static Block oreChicken;
-    public static Item TestCell;
+    public static Item DirtCell;
 
 
 
@@ -68,11 +67,8 @@ public class abos {
         scrod = new scrod().setUnlocalizedName("scrod").setMaxStackSize(64).setTextureName("abos:scrod").setMaxStackSize(64);
         GameRegistry.registerItem(scrod, scrod.getUnlocalizedName().substring(5));
 
-        //DirtCell = new DirtCell();
-        //GameRegistry.registerItem(DirtCell, DirtCell.getUnlocalizedName().substring(5));
-
-        TestCell = new TestCell();
-        GameRegistry.registerItem(TestCell, TestCell.getUnlocalizedName().substring(5));
+        DirtCell = new DirtCell();
+        GameRegistry.registerItem(DirtCell, DirtCell.getUnlocalizedName().substring(5));
 
         //Tools
         diamondObsidianPickaxe = new ItemObsidianPickaxe(diamondObsidianToolMaterial).setUnlocalizedName("ItemObsidianPickaxe").setTextureName("abos:obPick");
