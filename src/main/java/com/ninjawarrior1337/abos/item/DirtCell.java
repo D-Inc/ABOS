@@ -1,6 +1,8 @@
 package com.ninjawarrior1337.abos.item;
 
+import appeng.api.config.AccessRestriction;
 import appeng.api.config.FuzzyMode;
+import appeng.api.implementations.items.IAEItemPowerStorage;
 import appeng.api.implementations.items.IStorageCell;
 import appeng.api.storage.data.IAEItemStack;
 import com.ninjawarrior1337.abos.Reference;
@@ -11,8 +13,14 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by ninjawarrior1337 on 8/11/16.
  */
-public class DirtCell extends Item implements IStorageCell
+public class DirtCell extends Item implements IStorageCell, IAEItemPowerStorage
 {
+    public static final String suffix = "8";
+
+    public static final int byte_cell = 8;
+    public static final int type_cell = 1;
+    private final int MAX_POWER = 32000;
+
     public DirtCell()
     {
         setUnlocalizedName("dirt_cell");
@@ -82,5 +90,30 @@ public class DirtCell extends Item implements IStorageCell
     @Override
     public void setFuzzyMode(ItemStack is, FuzzyMode fzMode) {
 
+    }
+
+    @Override
+    public double injectAEPower(ItemStack is, double amt) {
+        return 0;
+    }
+
+    @Override
+    public double extractAEPower(ItemStack is, double amt) {
+        return 0;
+    }
+
+    @Override
+    public double getAEMaxPower(ItemStack is) {
+        return 0;
+    }
+
+    @Override
+    public double getAECurrentPower(ItemStack is) {
+        return 0;
+    }
+
+    @Override
+    public AccessRestriction getPowerFlow(ItemStack is) {
+        return null;
     }
 }

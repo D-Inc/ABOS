@@ -5,14 +5,16 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
-:extractMcpData UP-TO-DATE
+:extractMcpData
 :getVersionJson
-:extractUserDev UP-TO-DATE
+:extractUserDev
 :genSrgs SKIPPED
-:extractNatives UP-TO-DATE
+:extractNatives
 :getAssetsIndex
 :getAssets
-:makeStart SKIPPED
+:makeStart
+[ant:javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[ant:javac] 1 warning
 :downloadMcpTools SKIPPED
 :downloadClient SKIPPED
 :downloadServer SKIPPED
@@ -24,13 +26,11 @@
 :extractMinecraftSrc SKIPPED
 :recompMinecraft SKIPPED
 :repackMinecraft SKIPPED
-:setupDecompWorkspace UP-TO-DATE
+:setupDecompWorkspace
 :ideaModule
 Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6.pom
 Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-dev.jar
 Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-api.jar
-Download http://files.minecraftforge.net/maven/codechicken/CodeChickenLib/1.7.10-1.1.3.138/CodeChickenLib-1.7.10-1.1.3.138-dev.jar
-Download http://files.minecraftforge.net/maven/codechicken/ForgeMultipart/1.7.10-1.2.0.345/ForgeMultipart-1.7.10-1.2.0.345-dev.jar
 Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-sources.jar
 Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-beta-6/appliedenergistics2-rv3-beta-6-javadoc.jar
 :ideaProject
@@ -39,4 +39,4 @@ Download http://files.minecraftforge.net/maven/appeng/appliedenergistics2/rv3-be
 
 BUILD SUCCESSFUL
 
-Total time: 2 mins 49.862 secs
+Total time: 1 mins 13.807 secs
