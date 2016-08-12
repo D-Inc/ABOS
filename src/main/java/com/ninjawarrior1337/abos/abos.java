@@ -22,6 +22,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.crafting.InfusionRecipe;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class abos {
@@ -131,7 +132,7 @@ public class abos {
     private void loadThaumcraft()
     {
         ThaumcraftApi.registerObjectTag(new ItemStack(DirtCell), new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.EARTH, 1).add(Aspect.VOID, 64));
-        ThaumcraftApi.addShapelessArcaneCraftingRecipe("infusion_crafting", new ItemStack(DirtCell, 1, 0), new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.EARTH, 1).add(Aspect.VOID, 64), new Object[]{new ItemStack(RedDirt, 4, 0), new ItemStack(Items.nether_star, 1, 0)});
+        InfusionRecipe infusionRecipe = ThaumcraftApi.addInfusionCraftingRecipe("", new ItemStack(DirtCell), 0,new AspectList().add(Aspect.MECHANISM, 1).add(Aspect.EARTH, 1).add(Aspect.VOID, 16), new ItemStack(Items.nether_star), new ItemStack[]{new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt)});
     }
 
     @Mod.EventHandler
@@ -161,7 +162,7 @@ public class abos {
         GameRegistry.addRecipe(new ItemStack(scHoe, 1),new Object[]{"DD "," O "," O ", 'D',Items.diamond, 'O',abos.scrod});
         GameRegistry.addRecipe(new ItemStack(scApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.scrod, 'A', Items.golden_apple});
         GameRegistry.addShapelessRecipe(new ItemStack(RedDirt, 1), new Object[]{new ItemStack(Items.redstone), new ItemStack(Blocks.dirt)});
-        OreDictionary.registerOre("netherStar", new ItemStack(Items.nether_star));
+
         OreDictionary.registerOre("netherStar", DirtCell);
 
         //API's
