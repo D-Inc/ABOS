@@ -132,7 +132,7 @@ public class abos {
     private void loadThaumcraft()
     {
         ThaumcraftApi.registerObjectTag(new ItemStack(DirtCell), new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.EARTH, 1).add(Aspect.VOID, 64));
-        InfusionRecipe infusionRecipe = ThaumcraftApi.addInfusionCraftingRecipe("", new ItemStack(DirtCell), 0,new AspectList().add(Aspect.MECHANISM, 1).add(Aspect.EARTH, 1).add(Aspect.VOID, 16), new ItemStack(Items.nether_star), new ItemStack[]{new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt)});
+        InfusionRecipe dirtCellRecipe = ThaumcraftApi.addInfusionCraftingRecipe("", new ItemStack(DirtCell), 0,new AspectList().add(Aspect.MECHANISM, 1).add(Aspect.EARTH, 1).add(Aspect.VOID, 16), new ItemStack(Items.nether_star), new ItemStack[]{new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt)});
     }
 
     @Mod.EventHandler
