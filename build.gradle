@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7"
+version = "1.7.1"
 group= "com.ninjawarrior1337.abos" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "abos"
 
