@@ -2,9 +2,11 @@ package com.ninjawarrior1337.abos;
 
 import com.ninjawarrior1337.abos.block.RedstoneInfusedDirt;
 import com.ninjawarrior1337.abos.item.*;
+import com.ninjawarrior1337.abos.proxy.CommonProxy;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Optional;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -64,9 +66,14 @@ public class abos {
     @Mod.Instance(Reference.MOD_ID)
     public static abos instance;
 
+    @SidedProxy(clientSide = "com.ninjawarrior1337.abos.proxy.ClientProxy", serverSide = "com.ninjawarrior1337.abos.proxy.ServerProxy")
+    public static CommonProxy proxy;
+
     @Mod.EventHandler
-    public void PreInit(FMLPreInitializationEvent event)
+    public void PreInit(FMLPreInitializationEvent e)
     {
+        proxy.preInit(e);
+
         //Items
         itemObsidianRod = new ItemObsidianRod().setUnlocalizedName("ItemObsidianRod").setMaxStackSize(64).setTextureName(Reference.MOD_ID + ":obsidianstick");
         GameRegistry.registerItem(itemObsidianRod, itemObsidianRod.getUnlocalizedName().substring(5));
@@ -136,8 +143,10 @@ public class abos {
     }
 
     @Mod.EventHandler
-    public void Init(FMLInitializationEvent event)
+    public void Init(FMLInitializationEvent e)
     {
+        proxy.init(e);
+
         //Recipes
         GameRegistry.addRecipe(new ItemStack(itemObsidianRod, 4), new Object[]{"   ", "O  ", "O  ", 'O', Blocks.obsidian});
         GameRegistry.addRecipe(new ItemStack(itemObsidianRod, 4), new Object[]{"   ", " O ", " O ", 'O', Blocks.obsidian});
@@ -167,15 +176,12 @@ public class abos {
 
         //API's
         FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.register");
-
-
-
     }
 
     @Mod.EventHandler
-    public void PostInit(FMLPostInitializationEvent event)
+    public void PostInit(FMLPostInitializationEvent e)
     {
-
+        proxy.postInit(e);
     }
 }
 

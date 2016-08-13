@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/api" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/com/jadarstudios/developercapes" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
@@ -886,6 +887,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/CodeChickenCore-1.10.2-2.1.8.79-deobf.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/com/jadarstudios/developercapes" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

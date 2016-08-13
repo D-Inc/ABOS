@@ -1,0 +1,36 @@
+[18:47:06] [main/INFO]: Logging in with username & password
+[18:47:18] [main/INFO]: Setting user: ninjawarrior1337
+[18:47:22] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:47:23] [Client thread/ERROR]: Couldn't initialize twitch stream
+[18:47:45] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:A Bunch Of Stuff, FMLFileResourcePack:Applied Energistics 2, FMLFileResourcePack:Waila, FMLFileResourcePack:BC Silicon, FMLFileResourcePack:BuildCraft, FMLFileResourcePack:BC Transport, FMLFileResourcePack:BC Builders, FMLFileResourcePack:BC Robotics, FMLFileResourcePack:BC Energy, FMLFileResourcePack:BC Factory, FMLFileResourcePack:CraftGuide, FMLFileResourcePack:Forge Microblocks, FMLFileResourcePack:Forge Multipart, FMLFileResourcePack:Minecraft Multipart Plugin, FMLFileResourcePack:Ore Dictionary Converter, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[18:48:01] [Sound Library Loader/INFO]: Sound engine started
+[18:48:03] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[18:48:03] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[18:48:11] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:A Bunch Of Stuff, FMLFileResourcePack:Applied Energistics 2, FMLFileResourcePack:Waila, FMLFileResourcePack:BC Silicon, FMLFileResourcePack:BuildCraft, FMLFileResourcePack:BC Transport, FMLFileResourcePack:BC Builders, FMLFileResourcePack:BC Robotics, FMLFileResourcePack:BC Energy, FMLFileResourcePack:BC Factory, FMLFileResourcePack:CraftGuide, FMLFileResourcePack:Forge Microblocks, FMLFileResourcePack:Forge Multipart, FMLFileResourcePack:Minecraft Multipart Plugin, FMLFileResourcePack:Ore Dictionary Converter, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[18:48:14] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[18:48:15] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
+[18:48:16] [Sound Library Loader/INFO]: Sound engine started
+[18:48:32] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[18:48:32] [Server thread/INFO]: Generating keypair
+[18:48:33] [Server thread/INFO]: Preparing start region for level 0
+[18:48:35] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:48:36] [Server thread/INFO]: ninjawarrior1337[local:E:e1d8b858] logged in with entity id 40 at (-15.14078945720465, 66.0, 150.55678411079296)
+[18:48:36] [Server thread/INFO]: ninjawarrior1337 joined the game
+[18:48:44] [Server thread/INFO]: Saving and pausing game...
+[18:48:44] [Server thread/INFO]: Saving chunks for level 'Testing'/Overworld
+[18:48:44] [Server thread/INFO]: Saving chunks for level 'Testing'/Nether
+[18:48:44] [Server thread/INFO]: Saving chunks for level 'Testing'/The End
+[18:48:44] [Server thread/INFO]: Saving chunks for level 'Testing'/The Outer Lands
+[18:48:53] [Server thread/INFO]: Saving and pausing game...
+[18:48:53] [Server thread/INFO]: Saving chunks for level 'Testing'/Overworld
+[18:48:53] [Server thread/INFO]: Saving chunks for level 'Testing'/Nether
+[18:48:53] [Server thread/INFO]: Saving chunks for level 'Testing'/The End
+[18:48:53] [Server thread/INFO]: Saving chunks for level 'Testing'/The Outer Lands
+[18:48:54] [Server thread/INFO]: Stopping server
+[18:48:54] [Server thread/INFO]: Saving players
+[18:48:54] [Server thread/INFO]: Saving worlds
+[18:48:54] [Server thread/INFO]: Saving chunks for level 'Testing'/Overworld
+[18:48:54] [Server thread/INFO]: Saving chunks for level 'Testing'/Nether
+[18:48:54] [Server thread/INFO]: Saving chunks for level 'Testing'/The End
+[18:48:54] [Server thread/INFO]: Saving chunks for level 'Testing'/The Outer Lands
+[18:48:55] [Client thread/INFO]: Stopping!
