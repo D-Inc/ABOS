@@ -1,6 +1,8 @@
 package com.ninjawarrior1337.abos;
 
 import com.ninjawarrior1337.abos.block.RedstoneInfusedDirt;
+import com.ninjawarrior1337.abos.events.changeplayerdisplayname;
+import com.ninjawarrior1337.abos.events.superevent;
 import com.ninjawarrior1337.abos.item.*;
 import com.ninjawarrior1337.abos.proxy.CommonProxy;
 import cpw.mods.fml.common.Loader;
@@ -19,6 +21,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
@@ -147,6 +150,10 @@ public class abos {
     {
         proxy.init(e);
 
+        //Events
+        MinecraftForge.EVENT_BUS.register(new changeplayerdisplayname());
+        MinecraftForge.EVENT_BUS.register(new superevent());
+
         //Recipes
         GameRegistry.addRecipe(new ItemStack(itemObsidianRod, 4), new Object[]{"   ", "O  ", "O  ", 'O', Blocks.obsidian});
         GameRegistry.addRecipe(new ItemStack(itemObsidianRod, 4), new Object[]{"   ", " O ", " O ", 'O', Blocks.obsidian});
@@ -172,7 +179,7 @@ public class abos {
         GameRegistry.addRecipe(new ItemStack(scApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.scrod, 'A', Items.golden_apple});
         GameRegistry.addShapelessRecipe(new ItemStack(RedDirt, 1), new Object[]{new ItemStack(Items.redstone), new ItemStack(Blocks.dirt)});
 
-        OreDictionary.registerOre("netherStar", DirtCell);
+        OreDictionary.registerOre("itemNetherStar", DirtCell);
 
         //API's
         FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.register");
