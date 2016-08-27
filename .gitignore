@@ -1,3 +1,7 @@
 .idea
 .gradle
-eclipse
+*.iml
+*.ipr
+*.iws
+eclipse/
+out/
