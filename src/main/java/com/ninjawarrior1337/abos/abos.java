@@ -1,5 +1,6 @@
 package com.ninjawarrior1337.abos;
 
+import com.ninjawarrior1337.abos.block.CreativeLaser.CreativeLazer;
 import com.ninjawarrior1337.abos.block.RedstoneInfusedDirt;
 import com.ninjawarrior1337.abos.events.changeplayerdisplayname;
 import com.ninjawarrior1337.abos.events.superevent;
@@ -30,7 +31,7 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import vazkii.botania.api.BotaniaAPI;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = "required-after:appliedenergistics2")
 public class abos {
     public static Item itemObsidianRod;
     public static Item diamondObsidianPickaxe;
@@ -48,6 +49,7 @@ public class abos {
     public static Item scApple;
     public static Block RedDirt;
     public static Item DirtCell;
+    public static Block CreativeLaser;
 
 
 
@@ -122,6 +124,9 @@ public class abos {
         //Blocks
         RedDirt = new RedstoneInfusedDirt(Material.rock).setBlockName("RedstoneInfusedDirt").setBlockTextureName("abos:RedstoneInfusedDirt");
         GameRegistry.registerBlock(RedDirt, RedDirt.getUnlocalizedName().substring(5));
+
+        CreativeLaser = new CreativeLazer();
+        GameRegistry.registerBlock(CreativeLaser, CreativeLaser.getUnlocalizedName().substring(5) + "_abos");
 
         //Food
         obsidianApple = new ItemObsidianApple(20, 2.0F, true).setUnlocalizedName("ItemObsidianApple").setTextureName("abos:obApple");
