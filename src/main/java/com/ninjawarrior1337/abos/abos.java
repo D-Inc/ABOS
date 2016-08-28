@@ -194,7 +194,9 @@ public class abos {
         GameRegistry.addRecipe(new ItemStack(scApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.scrod, 'A', Items.golden_apple});
         GameRegistry.addShapelessRecipe(new ItemStack(RedDirt, 1), new Object[]{new ItemStack(Items.redstone), new ItemStack(Blocks.dirt)});
 
+        OreDictionary.registerOre("itemNetherStar", Items.nether_star);
         OreDictionary.registerOre("itemNetherStar", DirtCell);
+        OreDictionary.registerOre("blockRedDirt", RedDirt);
 
         //API's
         FMLInterModComms.sendMessage("cfm","register","com.ninjawarrior1337.abos.RegisterRecipes.register");
