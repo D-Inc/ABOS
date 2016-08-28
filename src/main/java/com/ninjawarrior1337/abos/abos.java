@@ -28,6 +28,7 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
+import vazkii.botania.api.BotaniaAPI;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class abos {
@@ -136,6 +137,13 @@ public class abos {
             loadThaumcraft();
         }
 
+        System.out.println("Checking If Botania is installed");
+        if(Loader.isModLoaded("Botania"))
+        {
+            System.out.println("Botania has been detected");
+            loadBotania();
+        }
+
     }
 
     @Optional.Method(modid = "Thaumcraft")
@@ -143,6 +151,13 @@ public class abos {
     {
         ThaumcraftApi.registerObjectTag(new ItemStack(DirtCell), new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.EARTH, 1).add(Aspect.VOID, 64));
         InfusionRecipe dirtCellRecipe = ThaumcraftApi.addInfusionCraftingRecipe("", new ItemStack(DirtCell), 0,new AspectList().add(Aspect.MECHANISM, 1).add(Aspect.EARTH, 1).add(Aspect.VOID, 16), new ItemStack(Items.nether_star), new ItemStack[]{new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt), new ItemStack(RedDirt)});
+    }
+
+    @Optional.Method(modid = "Botania")
+    private void loadBotania()
+    {
+        BotaniaAPI.registerPureDaisyRecipe(Blocks.dirt, abos.RedDirt, 0);
+        BotaniaAPI.registerPetalRecipe(new ItemStack(abos.DirtCell), new Object[]{new ItemStack(abos.RedDirt), new ItemStack(abos.RedDirt), new ItemStack(abos.RedDirt), new ItemStack(abos.RedDirt), new ItemStack(Items.nether_star)});
     }
 
     @Mod.EventHandler
