@@ -31,7 +31,7 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import vazkii.botania.api.BotaniaAPI;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = "required-after:appliedenergistics2")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = "required-after:appliedenergistics2;required-after:BuildCraft|Silicon")
 public class abos {
     public static Item itemObsidianRod;
     public static Item diamondObsidianPickaxe;
