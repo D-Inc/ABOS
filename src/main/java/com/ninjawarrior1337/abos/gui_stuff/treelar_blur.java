@@ -12,7 +12,7 @@ import org.lwjgl.opengl.GL11;
 public class treelar_blur
 {
     protected static final ResourceLocation treelarBlurPath = new ResourceLocation("textures/21.png");
-    private Minecraft mc;
+    Minecraft mc;
 
     public void renderTreelarBlur(int p_73836_1_, int p_73836_2_)
     {

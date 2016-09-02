@@ -11,7 +11,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 public class superevent
 {
-    private Minecraft mc;
+    Minecraft mc;
     ScaledResolution res = new ScaledResolution(this.mc, this.mc.displayHeight, this.mc.displayWidth);
     int k = res.getScaledWidth();
     int l = res.getScaledHeight();
@@ -19,6 +19,8 @@ public class superevent
     static EntityPlayer player;
 
     treelar_blur treelarBlur = new treelar_blur();
+
+    abos abos = new abos();
 
 
     @SubscribeEvent
