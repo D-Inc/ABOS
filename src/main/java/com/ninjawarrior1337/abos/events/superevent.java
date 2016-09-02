@@ -20,9 +20,6 @@ public class superevent
 
     treelar_blur treelarBlur = new treelar_blur();
 
-    abos abos = new abos();
-
-
     @SubscribeEvent
     public void onEvent(LivingEvent.LivingUpdateEvent event)
     {
