@@ -13,6 +13,11 @@ public class TileCreativeLaser extends TileLaser
         this.setBattery(new RFBattery(2147483647, 2147483647, 0));
     }
 
+    public int get()
+    {
+        return this.getBattery().getEnergyStored();
+    }
+
     @Override
     protected int getMaxPowerSent()
     {

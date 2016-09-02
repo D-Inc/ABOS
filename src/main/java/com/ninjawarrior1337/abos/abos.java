@@ -15,6 +15,7 @@ import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import fox.spiteful.avaritia.crafting.CompressorManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -51,6 +52,7 @@ public class abos {
     public static Item DirtCell;
     public static Block CreativeLaser;
 
+    public static Block BuildCraftLaser;
 
 
 
@@ -125,8 +127,8 @@ public class abos {
         RedDirt = new RedstoneInfusedDirt(Material.rock).setBlockName("RedstoneInfusedDirt").setBlockTextureName("abos:RedstoneInfusedDirt");
         GameRegistry.registerBlock(RedDirt, RedDirt.getUnlocalizedName().substring(5));
 
-        CreativeLaser = new CreativeLazer();
-        GameRegistry.registerBlock(CreativeLaser, CreativeLaser.getUnlocalizedName().substring(5) + "_abos");
+        CreativeLaser = new CreativeLazer().setBlockName("creative_laser");
+        GameRegistry.registerBlock(CreativeLaser, CreativeLaser.getUnlocalizedName().substring(5));
 
         //Food
         obsidianApple = new ItemObsidianApple(20, 2.0F, true).setUnlocalizedName("ItemObsidianApple").setTextureName("abos:obApple");
@@ -134,6 +136,8 @@ public class abos {
 
         scApple = new scApple (6, 0.5F, true).setUnlocalizedName("scApple").setTextureName("abos:scApple");
         GameRegistry.registerItem(scApple, scApple.getUnlocalizedName().substring(5));
+
+        FMLInterModComms.sendMessage("Waila", "register", "com.ninjawarrior1337.abos.thirdparty.Waila.onWailaCall");
 
         System.out.println("Checking If Thuamcraft is installed");
         if(Loader.isModLoaded("Thaumcraft"))
@@ -198,6 +202,8 @@ public class abos {
         GameRegistry.addRecipe(new ItemStack(scHoe, 1),new Object[]{"DD "," O "," O ", 'D',Items.diamond, 'O',abos.scrod});
         GameRegistry.addRecipe(new ItemStack(scApple, 1), new Object[]{"OOO","OAO","OOO", 'O',abos.scrod, 'A', Items.golden_apple});
         GameRegistry.addShapelessRecipe(new ItemStack(RedDirt, 1), new Object[]{new ItemStack(Items.redstone), new ItemStack(Blocks.dirt)});
+
+        CompressorManager.addRecipe(new ItemStack(CreativeLaser, 1, 0), 320, new ItemStack(RedDirt));
 
         OreDictionary.registerOre("itemNetherStar", Items.nether_star);
         OreDictionary.registerOre("itemNetherStar", DirtCell);

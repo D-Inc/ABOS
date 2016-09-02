@@ -13,6 +13,7 @@ public class CreativeLazer extends BlockLaser
     public CreativeLazer()
     {
         setCreativeTab(abos.mo_rod);
+        this.setBlockTextureName("creative_laser");
     }
 
     @Override
@@ -20,4 +21,5 @@ public class CreativeLazer extends BlockLaser
     {
         return new TileCreativeLaser();
     }
+
 }
