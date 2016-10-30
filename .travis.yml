@@ -8,6 +8,6 @@ deploy:
   api_key:
     secure: CmmKcogAOnjGGWcKvnTsfQ2YkCe+FsfBsSEsD5nyQa8cSnV8Mm9QycAhvOKE/NSdiSw53vgCAFWbkanV71sOWG9dPISg3YN+huJ+/gLHn8FvVHOC0YywExDqL5mgmfQoTaozdNFi0uKEF/7mdegzo9fOmje/ACLAFr+DVmGpQfBZhnbi0MQrcYw8BxxPmDP4L5iI4mU9cUjivzHhtt+aWErs/s3QL0wU+MPcSXW7ocRjBmssfq6xRSC7iEJ+TEdIKv+rwfo+gkBHQevgbsO8K+OzUDozk8EYl17ZgPL6VRnuXKeS4KeDpSnG3jeGsJ2IEpycxI55jXA2fLAwTq0a+Q+DSFnspEMxcaqA551iFtfdKnYBSIq/mk0GDtqam/bMaOyMNx7KD/epCH1cvdKYdjCDZLk4Ez1SVS5iNAZbRaUstB7xQ+hv2g9olk9RwzEKQxLRqux748LWhJrIfyxZIDGo0XAmUKyanuZDhYf/ezPeWUf0tu6q/x/4URdxR4Ulc7eBk5nV7j0KegKwMjL5glbOuQrjNh+SufSxIbfH7OmvfbQOPcV5DQyKMPsLFydz28+OsntcEEyfeOYLnObrBq2vo0vebnU5eLPInL0QVBmqY/+o32q5sQXgYz2X5pVMQpxJOA81DZSXVa5PZxfwazDB+QRiOoQDD0eziqK2gio=
   file:
-  - build/libs/*.jar
+  - "build/libs/*.jar"
   skip_cleanup: true
   on:
