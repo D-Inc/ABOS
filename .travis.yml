@@ -1,6 +1,8 @@
 language: java
 jdk: oraclejdk8
-script: ./gradlew build
+script:
+  - ./gradlew build
+  - ls build/libs
 install:
 - chmod +x gradle
 deploy:
