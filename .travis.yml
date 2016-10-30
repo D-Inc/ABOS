@@ -1,0 +1,14 @@
+language: java
+jdk: oraclejdk8
+script: gradle build
+install:
+- chmod +x gradle
+deploy:
+  provider: releases
+  user: "ninjawarrior1337"
+  password:
+    secure: "nqd4cMiwnwOxjZFLNb90trmzljR2AIwczjOQrMJYFbyDuXBkA1wCUWCXY44H/EFbkqmZMOQmJkJ2x4Va5k237mRjLtEbsI+vBpHdkeCBda4lsLnWdCW0MV5J+wsKkjFzilP84M6ono6QA03i8xMAEQNZvMOxCMd63hb7BJlljsAzCa0cEjPPGyzpf3yBccxIvlM7Y7Ad5txzDvyEootbcuO3s/3GjUYcRO+Y2/9hvOe4xyQ++zsYBbRoHipwNtlK6qpNhIfbfi63q2jImB4udTilgVToEh6iBBJ5LEEpTep1v8LP0/97EA/Xo/cD7Ogf6m62qpraR1V7a8EPBqCELst/1tpNxBJRE5xAiEYu6KhPl2MbBiG5nMyuV9bTc7lkLHYCh5WpTxV9Py5tCGQNfhbJrWy5/k2DdVptjjSHqyMVowbnNh3cwTS+Mg1Vn/6PMKTnBuz4TSP7NAy8CroscYpfTXSrWz5Z/dx+EO9Hmj8aodkZemWcH3gZ6YMYISKUu7+R5UveqQ+6CP2qVpcX5rnRInHe3nC9b2rtBFxPcntkP8ZrcSzGvOVWhkGvai6W60rhR90wg/ZC4NySQw3li/jGVdEeKv5EEccqDJM3++NoNQtDtXt0iPTk3Hed0jpZiLQZmxUgj/w7mcJQCdFvj/mWojIEB3Ctz43ygOX33l0="
+  file:
+  - build/libs/*.jar
+  skip_cleanup: true
+  on:
