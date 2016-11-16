@@ -17,6 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
+def env = System.getenv()
 version = "1.7.10-r" + env['TRAVIS_BUILD_NUMBER']
 group= "com.ninjawarrior1337.abos" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "abos"
